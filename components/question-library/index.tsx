@@ -3,7 +3,6 @@
 // #region IMPORT
 import { FC, useState } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
-
 import QuestionPanel from "./question-panel";
 import {
   getNextNumber,
