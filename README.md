@@ -1,9 +1,10 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+![Alt text](/public/images/frosty-toronto.png)
+
 ## Getting Started
 
 npm i next-mdx-remote
-
 
 First, run the development server:
 
