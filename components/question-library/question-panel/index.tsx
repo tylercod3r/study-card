@@ -10,10 +10,11 @@ import { answerLabel } from "@/libs/labels";
 // #region TYPE
 type Props = {
   question: QuestionType;
+  forceShowAnswer: boolean;
 };
 // #endregion
 
-const QuestionPanel: FC<Props> = ({ question }) => {
+const QuestionPanel: FC<Props> = ({ question, forceShowAnswer }) => {
   // #region HOOK - USE STATE
   const [showAnswer, setShowAnswer] = useState(false);
   // #endregion
@@ -67,7 +68,7 @@ const QuestionPanel: FC<Props> = ({ question }) => {
         {answerLabel}
       </button>
 
-      {showAnswer && (
+      {(showAnswer || forceShowAnswer) && (
         <section
           className="list-disc marker:text-blue-600"
           dangerouslySetInnerHTML={{ __html: question.content }}
