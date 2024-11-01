@@ -1,7 +1,8 @@
 // #region IMPORT
 // import Image from "next/image";
-import { useState } from "react";
+import { FC, useState } from "react";
 import { QuestionType } from "@/types/types";
+
 // #endregion
 
 // #region TYPE
@@ -10,7 +11,7 @@ type Props = {
 };
 // #endregion
 
-const QuestionPanel = (props: Props) => {
+const QuestionPanel: FC<Props> = ({ question }) => {
   // #region HOOK - USE STATE
   const [showAnswer, setShowAnswer] = useState(false);
   // #endregion
@@ -22,10 +23,10 @@ const QuestionPanel = (props: Props) => {
   // #region VIEW
   return (
     <section className="p-5 m-4 border-2 rounded-r-lg border-slate-900">
-      <h3>{props.question.title.toUpperCase()}</h3>
+      <h3>{question.title.toUpperCase()}</h3>
       <hr className="border-slate-600"></hr>
       <div>
-        {props.question.keywords?.map((keyword: string) => (
+        {question.keywords?.map((keyword: string) => (
           <p key={keyword} className="text-secondary text-cyan-500">
             {keyword.toUpperCase()}
           </p>
@@ -33,7 +34,7 @@ const QuestionPanel = (props: Props) => {
       </div>
 
       <div className="text-slate-400">
-        {props.question.subKeywords?.map((subKeyword: string) => (
+        {question.subKeywords?.map((subKeyword: string) => (
           <p key={subKeyword}>{subKeyword.toUpperCase()}</p>
         ))}
       </div>
@@ -53,7 +54,7 @@ const QuestionPanel = (props: Props) => {
         />
       </a> */}
 
-      <p className="my-4 text-2xl">{props.question.question}</p>
+      <p className="my-4 text-2xl">{question.question}</p>
 
       <button
         className="bg-blue-800 p-4 w-full my-10"
@@ -69,7 +70,9 @@ const QuestionPanel = (props: Props) => {
       </button>
 
       {showAnswer && (
-        <p className="text-4xl text-blue-500">{props.question.answer}</p>
+        <section className="text-4xl text-blue-500">
+          <div dangerouslySetInnerHTML={{ __html: question.content }} />
+        </section>
       )}
     </section>
   );
