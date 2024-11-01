@@ -2,6 +2,8 @@
 // import Image from "next/image";
 import { FC, useState } from "react";
 import { QuestionType } from "@/types/types";
+import Link from "next/link";
+import { answerLabel } from "@/libs/labels";
 
 // #endregion
 
@@ -57,22 +59,19 @@ const QuestionPanel: FC<Props> = ({ question }) => {
       <p className="my-4 text-2xl">{question.question}</p>
 
       <button
-        className="bg-blue-800 p-4 w-full my-10"
+        className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-10 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 w-full my-4"
         onClick={() => {
-          // console.log("length: " + props.props.projects.length);
-          // const randomIndex = getRandomInteger(0, projectCount);
-          // setIndex(randomIndex);
           setShowAnswer(!showAnswer);
-          // console.log("rand: " + randomIndex);
         }}
       >
-        SHOW
+        {answerLabel}
       </button>
 
       {showAnswer && (
-        <section className="text-4xl text-blue-500">
-          <div dangerouslySetInnerHTML={{ __html: question.content }} />
-        </section>
+        <section
+          className="list-disc marker:text-blue-600"
+          dangerouslySetInnerHTML={{ __html: question.content }}
+        />
       )}
     </section>
   );

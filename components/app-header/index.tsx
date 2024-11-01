@@ -5,14 +5,14 @@ import Image from "next/image";
 import { PromptFont, MonserratFont, RajdhaniFont } from "@/libs/fonts";
 import NavBar from "../nav-bar";
 
-import { siteTitle, siteDescription } from "@/libs/texts";
+import { siteTitle, siteDescription } from "@/libs/labels";
 import { motion, AnimatePresence } from "framer-motion";
 
 const AppHeader = () => {
   return (
-    <header className="p-1 shadow bg-[url('/images/frosty-toronto.png')] rounded-xl">
+    <header className="p-1 shadow rounded-xl">
       {/* <div className="flex w-full max-w-2xl pt-10 mx-auto align-middle md:pt-8"> */}
-      <div className="w-1/5 mr-2 ml-36">
+      <div className="w-3/5 mr-2 ml-36 bg-black">
         {/* <AnimatePresence>
           <motion.div
             initial="hidden"
@@ -34,7 +34,7 @@ const AppHeader = () => {
             }}
           > */}
         <h1
-          className={`${RajdhaniFont.variable} font-rajdhani text-secondary text-2xl text-black`}
+          className={`${RajdhaniFont.variable} font-rajdhani text-secondary text-4xl w-full text-white`}
         >
           {siteTitle}
         </h1>
@@ -61,8 +61,8 @@ const AppHeader = () => {
           className="rounded-lg"
           alt="yop"
           src="/images/sonic-mind-control.png"
-          width={400}
-          height={400}
+          width={200}
+          height={200}
         />
       </div>
 

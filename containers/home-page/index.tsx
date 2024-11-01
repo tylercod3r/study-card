@@ -1,6 +1,6 @@
 // #region IMPORT
 import QuestionLibrary from "@/components/question-library";
-import { getQuestionData } from "@/utils/content-utils";
+import { getQuestionData } from "@/utils/content-util";
 import { FC } from "react";
 // #endregion
 

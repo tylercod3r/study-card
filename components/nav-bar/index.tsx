@@ -12,7 +12,7 @@ import {
   contactLabel,
   contactEmail,
   questionsLabel,
-} from "@/libs/texts";
+} from "@/libs/labels";
 
 import { TfiEmail } from "react-icons/tfi";
 

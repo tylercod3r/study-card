@@ -5,10 +5,9 @@ import { FC, useState } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
 
 import QuestionPanel from "./question-panel";
-import { getRandomInteger } from "@/utils/math-utils";
-import { nextButtonLabel } from "@/libs/texts";
+import { getRandomInteger } from "@/utils/math-util";
+import { nextButtonLabel, nextQuestionButtonLabel } from "@/libs/labels";
 import { QuestionType } from "@/types/types";
-// import { questionType } from "@/types/types";
 // #endregion
 
 // #region TYPE
@@ -50,12 +49,12 @@ const QuestionLibrary: FC<QuestionLibraryProps> = ({ questions }) => {
     <section>
       {/* {props.props.projects?.map((project: any) => ( */}
       <button
-        className="bg-green-800 p-4 w-full"
+        className="focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium text-sm px-5 py-10.5 me-2 mb-4 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full my-4 p-4"
         onClick={() => {
           setIndex(getNewRandomInt());
         }}
       >
-        {nextButtonLabel}
+        {nextQuestionButtonLabel}
       </button>
       <QuestionPanel key={question.title} question={question} />
       {/* ))} */}
