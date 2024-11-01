@@ -1,10 +1,7 @@
 // #region IMPORT
-// import Image from "next/image";
 import { FC, useState } from "react";
 import { QuestionType } from "@/types/types";
-import Link from "next/link";
 import { answerLabel } from "@/libs/labels";
-
 // #endregion
 
 // #region TYPE
