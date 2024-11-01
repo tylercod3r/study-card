@@ -12,7 +12,6 @@ import {
 } from "@/utils/math-util";
 import { nextQuestionButtonLabel } from "@/libs/labels";
 import { QuestionType } from "@/types/types";
-import { count } from "console";
 // #endregion
 
 // #region TYPE
@@ -67,7 +66,7 @@ const QuestionLibrary: FC<QuestionLibraryProps> = ({ questions }) => {
     //     exit={{ opacity: 0, y: 15 }}
     //     transition={{ delay: 0.25 }}
     //   >
-    <div onKeyDown={keyDownHandler} tabIndex={0}>
+    <div onKeyDown={keyDownHandler} tabIndex={0} autoFocus={true}>
       <section>
         {/* {props.props.projects?.map((project: any) => ( */}
         <button
