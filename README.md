@@ -2,7 +2,9 @@
 
 ## Overview
 
-Looked for an "flash card" app that was free, and wouldn't couple me to a 3rd-party provider / plan. Was unable to find anything suitable, so made this simple app.
+Looked for a "flash card" app that was free, and wouldn't couple me to a 3rd-party provider / plan.
+
+Was unable to find anything suitable, so made this simple app!
 
 ## setup
 
