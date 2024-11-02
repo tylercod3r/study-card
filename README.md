@@ -1,40 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ![App Screenshot](/public/images/screen-shot.png)
 
-## Getting Started
+## Overview
 
-npm i next-mdx-remote
+Looked for an "flash card" app that was free, and wouldn't couple me to a 3rd-party provider / plan. Was unable to find anything suitable, so made this simple app.
 
-First, run the development server:
+## setup
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- this is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- make sure you have [Node.js](https://nodejs.org/en) installed.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. download the project source:
+   `git clone https://github.com/tylercod3r/study-card.git`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. navigate to the project folder:
+   `cd study-card`
 
-## Learn More
+3. initialize the project:
+   `git init`
 
-To learn more about Next.js, take a look at the following resources:
+4. run the project:
+   `npm run dev`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## use
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- the app starts by loading a random 'question.'
+- click the 'answer' button to toggle question responses.
+- click the "next question" button to load a 'random' question.
+- use the keyboard arrow keys to sequentially move through the questions.
 
-## Deploy on Vercel
+## faq
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Q: How do you edit or change the questions?
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- edit the 'markdown' (.md) files found in:
+  `/data/questions`
+
+Q: The keyboard shortcuts don't seem to work?
+
+- make sure you have the main section 'selected' by clicking any of the buttons.
+
+# contact
+
+If you'd ever like to talk tech, projects, e-music, or politics:
+
+- contact@codebycandle.com
+- tyler@tylercoder.com
