@@ -18,11 +18,14 @@ Was unable to find anything suitable, so made this simple app!
 2. navigate to the project folder:
    `cd study-card`
 
-3. initialize the project:
-   `git init`
+3. install project dependencies:
+   `npm install`
 
 4. run the project:
    `npm run dev`
+
+5. view in browser:
+   `localhost:3000'
 
 ## use
 
