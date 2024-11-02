@@ -25,7 +25,7 @@ Was unable to find anything suitable, so made this simple app!
    `npm run dev`
 
 5. view in browser:
-   `localhost:3000'
+   `localhost:3000`
 
 ## use
 
