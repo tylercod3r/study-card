@@ -1,7 +1,7 @@
 "use client";
 
 // #region IMPORT
-import { FC, useState } from "react";
+import { FC, useState, useRef, useEffect } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
 import QuestionPanel from "./question-panel";
 import {
@@ -28,6 +28,15 @@ const QuestionLibrary: FC<QuestionLibraryProps> = ({ questions }) => {
   // #region VARIABLE
   const questionCount = questions.length;
   const question = questions[index];
+
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const divRef = useRef<HTMLDivElement>(null);
+  // #endregion
+
+  // #region HOOK - USE EFFECT
+  useEffect(() => {
+    divRef.current?.focus();
+  }, []);
   // #endregion
 
   // #region METHOD
@@ -40,8 +49,9 @@ const QuestionLibrary: FC<QuestionLibraryProps> = ({ questions }) => {
     return randomIndex;
   };
 
-  // onKeyDown handler function
   const keyDownHandler = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    divRef.current?.focus();
+
     switch (event.code) {
       case "ArrowLeft":
         setIndex(getNextNumber(0, questionCount - 1, index));
@@ -65,10 +75,10 @@ const QuestionLibrary: FC<QuestionLibraryProps> = ({ questions }) => {
     //     exit={{ opacity: 0, y: 15 }}
     //     transition={{ delay: 0.25 }}
     //   >
-    <div onKeyDown={keyDownHandler} tabIndex={0} autoFocus={true}>
+    <div onKeyDown={keyDownHandler} tabIndex={0} ref={divRef}>
       <section>
-        {/* {props.props.projects?.map((project: any) => ( */}
         <button
+          ref={buttonRef}
           className="focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium text-sm px-5 py-10.5 me-2 mb-4 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full my-4 p-4"
           onClick={() => {
             setIndex(getNewRandomInt());
@@ -77,7 +87,6 @@ const QuestionLibrary: FC<QuestionLibraryProps> = ({ questions }) => {
           {nextQuestionButtonLabel}
         </button>
         <QuestionPanel forceShowAnswer={showAnswer} question={question} />
-        {/* ))} */}
       </section>
     </div>
     //   </motion.div>

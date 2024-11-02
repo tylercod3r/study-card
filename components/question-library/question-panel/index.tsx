@@ -25,7 +25,7 @@ const QuestionPanel: FC<Props> = ({ question, forceShowAnswer }) => {
     <section className="p-5 m-4 border-2 rounded-r-lg border-slate-900">
       <h3>{question.title.toUpperCase()}</h3>
       <hr className="border-slate-600"></hr>
-      <div>
+      <div autoFocus={true}>
         {question.keywords?.map((keyword: string) => (
           <p key={keyword} className="text-secondary text-cyan-500">
             {keyword.toUpperCase()}
