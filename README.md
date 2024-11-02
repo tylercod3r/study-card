@@ -1,6 +1,6 @@
 ![App Screenshot](/public/images/screen-shot.png)
 
-## Overview
+## overview
 
 Looked for a "flash card" app that was free, and wouldn't couple me to a 3rd-party provider / plan.
 
