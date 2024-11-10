@@ -47,7 +47,4 @@ Q: The keyboard shortcuts don't seem to work?
 
 # contact
 
-If you'd like to talk tech, projects, e-music, or politics:
-
-- contact@codebycandle.com
-- tyler@tylercoder.com
+- tyler@codebycandle.com
