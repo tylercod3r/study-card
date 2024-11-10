@@ -1,74 +1,39 @@
 "use client";
 
+// #region IMPORT
 import Image from "next/image";
-
-import { PromptFont, MonserratFont, RajdhaniFont } from "@/libs/fonts";
-import NavBar from "../nav-bar";
-
-import { siteTitle, siteDescription } from "@/libs/labels";
-import { motion, AnimatePresence } from "framer-motion";
+import { MonserratFont, RajdhaniFont } from "@/lib/fonts";
+import { siteTitle, siteDescription } from "@/lib/labels";
+import { HEADER_IMAGE_FILE } from "@/lib/files";
+// #endregion
 
 const AppHeader = () => {
+  // #region VIEW
   return (
     <header className="p-1 shadow rounded-xl">
-      {/* <div className="flex w-full max-w-2xl pt-10 mx-auto align-middle md:pt-8"> */}
       <div className="w-3/5 mr-2 ml-36 bg-black">
-        {/* <AnimatePresence>
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {
-                scale: 0.8,
-                opacity: 0,
-                y: -45,
-              },
-              visible: {
-                scale: 2,
-                opacity: 1,
-                y: 0,
-                transition: {
-                  delay: 0.4,
-                },
-              },
-            }}
-          > */}
         <h1
           className={`${RajdhaniFont.variable} font-rajdhani text-secondary text-4xl w-full text-white`}
         >
           {siteTitle}
         </h1>
-        {/* </motion.div>
-        </AnimatePresence> */}
-
-        {/* <AnimatePresence>
-          <motion.div
-            initial={{ opacity: 0, y: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 0 }}
-            transition={{ delay: 1.5, duration: 2 }}
-            className="flex m-auto border-slate-800 text-primary"
-          > */}
         <h2
           className={`text-slate-400 overflow-visible whitespace-nowrap ${MonserratFont.variable} font-monserrat`}
         >
           {siteDescription}
         </h2>
-        {/* </motion.div>
-        </AnimatePresence> */}
 
         <Image
           className="rounded-lg"
           alt="yop"
-          src="/images/sonic-mind-control.png"
+          src={HEADER_IMAGE_FILE}
           width={200}
           height={200}
         />
       </div>
-
-      {/* <NavBar /> */}
     </header>
   );
+  // #endregion
 };
 
 export default AppHeader;

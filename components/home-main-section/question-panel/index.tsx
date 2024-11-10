@@ -1,7 +1,7 @@
 // #region IMPORT
 import { FC, useState } from "react";
-import { QuestionType } from "@/types/types";
-import { answerLabel } from "@/libs/labels";
+import { QuestionType } from "@/lib/types";
+import { answerLabel } from "@/lib/labels";
 // #endregion
 
 // #region TYPE
@@ -14,10 +14,6 @@ type Props = {
 const QuestionPanel: FC<Props> = ({ question, forceShowAnswer }) => {
   // #region HOOK - USE STATE
   const [showAnswer, setShowAnswer] = useState(false);
-  // #endregion
-
-  // #region VARIABLE
-  // const imagePath = `/images/projects/${props.question.image}`;
   // #endregion
 
   // #region VIEW
@@ -38,21 +34,6 @@ const QuestionPanel: FC<Props> = ({ question, forceShowAnswer }) => {
           <p key={subKeyword}>{subKeyword.toUpperCase()}</p>
         ))}
       </div>
-
-      {/* <a
-        className="px-3 shadow-lg"
-        href={props.project.url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Image
-          className="rounded-lg shadow-lg"
-          src={imagePath}
-          width="270"
-          height="230"
-          alt={props.project.title}
-        />
-      </a> */}
 
       <p className="my-4 text-2xl">{question.question}</p>
 

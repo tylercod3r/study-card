@@ -2,7 +2,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { APP_CONTENT_PATH, QUESTION_FOLDER } from "@/libs/folders";
+import { APP_CONTENT_PATH, QUESTION_FOLDER } from "@/lib/files";
 // #endregion
 
 // #region EXPORT

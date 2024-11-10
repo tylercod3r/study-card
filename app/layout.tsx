@@ -5,7 +5,7 @@ import AppHeader from "@/components/app-header";
 // import AppFooter from "@/components/app-footer";
 
 import "./globals.css";
-import { RobotoFont } from "@/libs/fonts";
+import { RobotoFont } from "@/lib/fonts";
 // #endregion
 
 // #region EXPORT - METADATA
