@@ -59,8 +59,11 @@ const QuestionLibrary: FC<QuestionLibraryProps> = ({ questions }) => {
       case "ArrowRight":
         setIndex(getPreviousNumber(0, questionCount - 1, index));
         break;
-      case "Enter":
+      case "Space":
         setShowAnswer(!showAnswer);
+        break;
+      case "Enter":
+        setIndex(getNewRandomInt());
         break;
     }
   };
