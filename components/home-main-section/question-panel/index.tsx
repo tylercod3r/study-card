@@ -48,7 +48,7 @@ const QuestionPanel: FC<Props> = ({ question, forceShowAnswer }) => {
 
       {(showAnswer || forceShowAnswer) && (
         <section
-          className="list-disc marker:text-blue-600"
+          className="list-disc marker:text-blue-600 text-orange-500"
           dangerouslySetInnerHTML={{ __html: question.content }}
         />
       )}
